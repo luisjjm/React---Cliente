@@ -1,36 +1,39 @@
 import './App.css'
+import { products } from './Data/products.js'
 
-let nombre = "Luis";
+const elementos = products;
 
-function Saludo({ nombre }) {
-  return (
-    <>
-    <h1 className='titulo'>Hola {nombre}</h1>
-    </>
-  )
-}
-
-function Tarjeta({alumno}) {
-  return (
-    <>
-      <div className='center'>
-        <div className='tarjeta'>
-          <h2>Alumno: {alumno.nombre}</h2>
-          <p>Edad: {alumno.edad}</p>
-          <p>Curso: {alumno.curso}</p>
-          <p>Fecha: {alumno.fecha}</p>
-        </div>
+// COMPONENTE PRODUCTOS
+function ProductCard(props) {
+  return(
+    <article className='product-card'>
+      <div className='product-visual'>
+        {props.emoji}
       </div>
-    </>
-  )
+      <div className='product-info'>
+        <p className='product-category'>{props.category}</p>
+        <h3>{props.name}</h3>
+        <p className='product-price'>{props.price}</p>
+      </div>
+    </article>
+  );
 }
 
 function App() {
-  return (
-    <>
-      <Saludo nombre={nombre}/>
-      <Tarjeta alumno={{nombre: nombre, edad: 28, curso: "DAW", fecha: "26/27"}}/>
-    </>
+  return(
+    <div><p>Hola</p>
+        {elementos.map((product) => {
+         return( 
+            <ProductCard
+              emoji = {product.emoji}
+              category = {product.category}
+              name = {product.name}
+              price = {product.price}
+              key = {product.name}
+            />
+          );
+        })}
+    </div>
   )
 }
 
