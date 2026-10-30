@@ -1,3 +1,19 @@
+# Docker
+El proyecto contiene un Dockerfile y un compose.yaml.
+
+Para constuir la imagen y levantar el contenedor desde la raiz del proyecto. Ejecutar en terminal:
+> docker compose up -d --build
+
+Acceder a:
+> http://localhost:5173/
+
+Si fallara ejecutar en local:
+Instalar node_modules.
+> npm install
+
+Ejecutar vite:
+> npm run dev
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
