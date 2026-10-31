@@ -1,34 +1,56 @@
 body{
     background-color: var(--bg-color1);
+    margin: 0;
 }
 
 label{
     font-family: Alegreya Sans SC;
 }
 
-.formulario{
-    color: var(--text-colorDark);
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    gap: 10px;
-}
-
-.tituloForm{
-    font-family: Elsie;
-    font-size: 36px;
+h1 {
+    font-size: 3rem;
     text-align: center;
 }
 
-.buttonForm{
-    width: fit-content;
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E75A28;
+    color: var(--text-colorLight);
+    margin-bottom: 50px
 }
 
-textarea{
-    resize: none;
+nav > p {
+    font-size: 1.2rem;
 }
 
-.inputPrice{
-    width: 20%;
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBody > p {
+    font-size: 5rem;
+}
+
+.formBody{
+    background-color: var(--bg-color2);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.formSection{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button{
+    margin-top: 10px;
+    width: 100px;
 }
